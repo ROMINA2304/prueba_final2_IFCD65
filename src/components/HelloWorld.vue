@@ -83,6 +83,7 @@
         >
       </li>
     </ul>
+    <button class="btn-estilo" @click="mostrarMensaje">Click aqui</button>
   </div>
 </template>
 
@@ -91,6 +92,11 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String,
+  },
+  methods: {
+    mostrarMensaje() {
+      alert("¡Lo logre!");
+    },
   },
 };
 </script>
@@ -110,5 +116,19 @@ li {
 }
 a {
   color: #42b983;
+}
+.btn-estilo {
+  background-color: #4caf59;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-estilo:hover {
+  background-color: #45a049;
 }
 </style>
